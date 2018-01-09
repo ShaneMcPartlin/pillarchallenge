@@ -18,6 +18,12 @@ public class BabysitterTest {
 		assertInt(56, bs.payout(),3);
 	}
 
+	//Test 4
+	public void BabysitterWorksPastBedtimeAndMidnight() {
+		Babysitter bs = new Babysitter(5,2,9);
+		assertInt(104, bs.payout(),4);
+	}
+
 	//custom assert function
 	public void assertInt(int a, int b, int testIndex) {
 		if (a != b)
@@ -31,5 +37,6 @@ public class BabysitterTest {
 		bst.BabysitterWorksForOneHourBeforeMidnightAndBedtime();
 		bst.BabysitterWorksForMutipleHoursBeforeMidnightAndBedtime();
 		bst.BabysitterWorksForMultipleHoursWithBedtimeInTheMiddle();
+		bst.BabysitterWorksPastBedtimeAndMidnight();
 	}
 }
