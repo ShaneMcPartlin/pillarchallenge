@@ -1,7 +1,12 @@
 public class Babysitter {
-	Babysitter() {}
+	private int startTime;
+	private int endTime;
+	Babysitter(int start, int end) {
+		startTime = start;
+		endTime = end;
+	}
 
 	public int payout() {
-		return 12;
+		return (endTime - startTime) * 12;
 	}
 }
