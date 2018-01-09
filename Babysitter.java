@@ -1,4 +1,6 @@
 public class Babysitter {
+
+	//initialize and assign key times
 	private int startTime;
 	private int endTime;
 	private int bedTime;
@@ -10,6 +12,8 @@ public class Babysitter {
 
 	public int payout() {
 		int pay = 0;
+
+		//add appropriate hourly wage based on key times
 		for (int i=startTime; i<endTime; ++i) {
 			if (i < bedTime) {
 				pay += 12;
@@ -21,7 +25,6 @@ public class Babysitter {
 					pay += 16;
 			}
 		}
-		// System.out.println("Total: " + pay);
 		return pay;
 	}
 }
