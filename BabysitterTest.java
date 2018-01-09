@@ -1,33 +1,41 @@
 public class BabysitterTest {
-	
+	//create a single reference and reassign
+	Babysitter bs;
+
 	//Test 1
 	public void BabysitterWorksForOneHourBeforeMidnightAndBedtime() {
-		Babysitter bs = new Babysitter(5,6,9);
+		bs = new Babysitter(5,6,9);
 		assertInt(12, bs.payout(),1);
 	}
 
 	//Test 2
 	public void BabysitterWorksForMutipleHoursBeforeMidnightAndBedtime() {
-		Babysitter bs = new Babysitter(5,8,9);
+		bs = new Babysitter(5,8,9);
 		assertInt(36, bs.payout(),2);
 	}
 
 	//Test 3
 	public void BabysitterWorksForMultipleHoursWithBedtimeInTheMiddle() {
-		Babysitter bs = new Babysitter(5,10,9);
+		bs = new Babysitter(5,10,9);
 		assertInt(56, bs.payout(),3);
 	}
 
 	//Test 4
 	public void BabysitterWorksPastBedtimeAndMidnight() {
-		Babysitter bs = new Babysitter(5,2,9);
+		bs = new Babysitter(5,2,9);
 		assertInt(104, bs.payout(),4);
 	}
 
 	//Test 5
 	public void BabysitterStartsAtBedtimeAndLeavesAfterMidnight() {
-		Babysitter bs = new Babysitter(9,3,9);
+		bs = new Babysitter(9,3,9);
 		assertInt(72, bs.payout(),5);
+	}
+
+	//Test 6
+	public void BabysitterStartsAtBedtimeAndLeavesAtMidnight() {
+		bs = new Babysitter(9,12,9);
+		assertInt(24, bs.payout(),6);
 	}
 
 	//custom assert function
@@ -45,5 +53,6 @@ public class BabysitterTest {
 		bst.BabysitterWorksForMultipleHoursWithBedtimeInTheMiddle();
 		bst.BabysitterWorksPastBedtimeAndMidnight();
 		bst.BabysitterStartsAtBedtimeAndLeavesAfterMidnight();
+		bst.BabysitterStartsAtBedtimeAndLeavesAtMidnight();
 	}
 }
