@@ -21,7 +21,7 @@ public class Babysitter {
 					pay += 16;
 			}
 		}
-		System.out.println("Total: " + pay);
+		// System.out.println("Total: " + pay);
 		return pay;
 	}
 }
