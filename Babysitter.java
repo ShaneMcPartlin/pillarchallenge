@@ -5,6 +5,8 @@ public class Babysitter {
 	private int endTime;
 	private int bedTime;
 	Babysitter(int start, int end, int bed) {
+
+		//"if the time is in the AM, add 12 to it for simple iteration"
 		startTime = (start < 5) ? start + 12 : start;
 		endTime = (end < 5) ? end + 12 : end;
 		bedTime = (bed < 5) ? bed + 12 : bed;
